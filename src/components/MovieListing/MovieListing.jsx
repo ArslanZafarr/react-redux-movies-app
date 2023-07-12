@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { getAllMovies } from '../../features/movies/movieSlice'
 import MovieCard from '../MovieCard/MovieCard'
-
+import "../MovieListing/MovieListing.scss"
 const MovieListing = () => {
   const movies = useSelector(getAllMovies)
   let moviesRender = "";
@@ -17,9 +17,17 @@ const MovieListing = () => {
 
 
   return (
-    <div>MovieListing
-      {moviesRender}
-    </div>
+    <>
+      <section className='movie-listing-section'>
+        <div className='movie-listing-container'>
+          <div className='movie-listing-row'>
+            {moviesRender}
+          </div>
+        </div>
+      </section>
+
+    </>
+
   )
 }
 

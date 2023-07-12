@@ -1,0 +1,16 @@
+
+
+.movie-listing-section{
+    padding: 64px 0;
+}
+
+.movie-listing-container{
+    margin: 0px 40px;
+}
+
+.movie-listing-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 24px;
+}
