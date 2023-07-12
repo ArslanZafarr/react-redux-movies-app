@@ -3,12 +3,12 @@ import movieApi from '../../common/apis/movieApi'
 import { APIkey } from "../../common/apis/movieApiKey"
 import { useDispatch } from 'react-redux'
 import { addMovies } from '../../features/movies/movieSlice'
+import MovieListing from '../MovieListing/MovieListing'
 
 const Home = () => {
   const movieSearch = "Harry"
   const dispatch = useDispatch();
   useEffect(() => {
-
     const fetchMovies = async () => {
       const res = await movieApi
         .get(`?apikey=${APIkey}&s=${movieSearch}&type=movie`)
@@ -23,7 +23,10 @@ const Home = () => {
   }, [])
 
   return (
-    <div>Home</div>
+    <div>
+      <MovieListing />
+
+    </div>
   )
 }
 
